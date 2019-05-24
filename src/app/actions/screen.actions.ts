@@ -1,27 +1,19 @@
 import { Action } from '@ngrx/store';
 
 export enum ScreenActionTypes {
-  IncreaseSize = '[Screen] Increase ScreenSize',
-  DecreaseSize = '[Screen] Decrease ScreenSize',
   ChangeSize = '[Screen] Change ScreenSize'
-  
 }
 
-export class IncreaseSize implements Action {
-  readonly type = ScreenActionTypes.IncreaseSize;
+export interface ChangeScreenSizePayload {
+  width: number;
+  height: number;
 }
 
-export class DecreaseSize implements Action {
-  readonly type = ScreenActionTypes.DecreaseSize;
-}
-
-export class ChangeSize implements Action {
+export class ChangeScreenSize implements Action {
   readonly type = ScreenActionTypes.ChangeSize;
 
-  constructor(public payload: { event: any}) {
-
+  constructor(public payload: ChangeScreenSizePayload) {
   }
 }
 
-
-export type ScreenActions = IncreaseSize | DecreaseSize;
+export type ScreenActions = ChangeScreenSize;

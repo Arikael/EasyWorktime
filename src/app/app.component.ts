@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { Store, ActionReducer, select } from '@ngrx/store';
+import { ScreenState } from './reducers/screen.reducer';
+import { ChangeScreenSize } from './actions/screen.actions';
+import { AppState } from './reducers';
+
+export const getScreenSize = (state: AppState) => state.screen;
 
 @Component({
   selector: 'app-root',
@@ -10,14 +16,15 @@ import { debounceTime } from 'rxjs/operators';
 export class AppComponent implements OnInit {
   title = 'EasyWorktime';
 
+  constructor(private store: Store<AppState>) {
+    this.store.dispatch(new ChangeScreenSize({
+      width: window.innerWidth,
+      height: window.innerHeight
+    }));
+  }
+
   ngOnInit(): void {
-
-    fromEvent(window, 'resize').pipe(debounceTime(500)).subscribe((event: any) => {
-      console.log(event.target);
-    })
-
-    if (window.matchMedia("(max-width: 480px)").matches) {
-      console.log('test')
-    }
+    this.store.pipe(select(getScreenSize))
+    .subscribe((screen: ScreenState) => console.log(screen));
   }
 }
