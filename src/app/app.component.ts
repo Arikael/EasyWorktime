@@ -15,6 +15,7 @@ export const getScreenSize = (state: AppState) => state.screen;
 })
 export class AppComponent implements OnInit {
   title = 'EasyWorktime';
+  isSmallScreen?: boolean;
 
   constructor(private store: Store<AppState>) {
     this.store.dispatch(new ChangeScreenSize({
