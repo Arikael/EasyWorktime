@@ -10,7 +10,7 @@ import { WorktimeEntry } from '../worktime/worktime-entry';
 @Injectable()
 export class WorktimeEffects {
 
-  @Effect()
+ /* @Effect()
   worktimes = this.actions$.pipe(
     ofType(WorktimeActionTypes.LoadWorktimes),
     mergeMap((action: LoadWorktimes) => {
@@ -23,7 +23,7 @@ export class WorktimeEffects {
         })
       );
     })
-  );
+  );*/
 
   constructor(private actions$: Actions, private worktimeService: WorktimeService) {}
 

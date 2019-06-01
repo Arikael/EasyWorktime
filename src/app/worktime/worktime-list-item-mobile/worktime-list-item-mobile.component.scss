@@ -1,0 +1,30 @@
+
+.worktime-item__date {
+    margin-right: 4rem;
+}
+
+.worktime-item__detail-hours {
+    display: flex;
+}
+
+.worktime-time-separator {
+    flex: 1;
+    background: black;
+    height: 1px;
+    align-self: center;
+    margin: 0 0.5rem;
+}
+
+.worktime-item__morning-hours,
+.worktime-item__afternoon-hours {
+    flex: 0 0 50%;
+    display: flex;
+}
+
+.worktime-item__morning-hours {
+    padding-right: 1rem;
+}
+
+.worktime-item__afternoon-hours {
+    padding-left: 1rem;
+}

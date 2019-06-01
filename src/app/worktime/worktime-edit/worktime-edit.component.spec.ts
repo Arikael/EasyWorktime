@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorktimeEntryComponent } from './worktime-entry.component';
+import { WorktimeEntryComponent } from './worktime-edit.component';
 
 describe('WorktimeEntryComponent', () => {
   let component: WorktimeEntryComponent;
