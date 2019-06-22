@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorktimeListItemMobileComponent implements OnInit {
 
+  detailVisible = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleDetail() {
+    this.detailVisible = !this.detailVisible;
+  }
 }

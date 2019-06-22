@@ -1,6 +1,37 @@
 
-.worktime-item__date {
-    margin-right: 4rem;
+.worktime-item {
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.worktime-item__title,
+.worktime-item__details {
+    margin: 0;
+}
+
+.worktime-item__details {
+    margin-left: 1.5rem;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.worktime-item__title {
+    font-weight: 600;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.worktime-item__hours {
+    padding: 0 0.25rem;
+    align-self: flex-end;
+    border-radius: 5px;
+    background: #f44336;
+    color: white;
+}
+
+.worktime-item__details {
+    flex: 1;
+    align-self: center;
 }
 
 .worktime-item__detail-hours {
@@ -9,7 +40,7 @@
 
 .worktime-time-separator {
     flex: 1;
-    background: black;
+    background: rgba(0, 0, 0, 0.54);
     height: 1px;
     align-self: center;
     margin: 0 0.5rem;
