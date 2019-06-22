@@ -12,6 +12,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { ScreenEffects } from './effects/screen.effects';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ScreenEffects } from './effects/screen.effects';
     AppRoutingModule,
     MatToolbarModule,
     MatTabsModule,
+    MatIconModule,
     EffectsModule.forRoot([ScreenEffects]),
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []

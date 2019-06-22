@@ -10,11 +10,13 @@ export class MenuComponent implements OnInit {
   navLinks = [
     {
       path: './worktime',
-      text: 'Worktime'
+      text: 'Worktime',
+      icon: 'access_time'
     },
     {
       path: './settings',
-      text: 'Settings'
+      text: 'Settings',
+      icon: 'settings'
     }
   ];
 
