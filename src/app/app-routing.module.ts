@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'worktime',
-    loadChildren: './worktime/worktime.module#WorktimeModule'
+    loadChildren: () => import('./worktime/worktime.module').then(m => m.WorktimeModule)
   },
   {
     path: 'settings',
-    loadChildren: './settings/settings.module#SettingsModule'
+    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
   },
 ];
 
