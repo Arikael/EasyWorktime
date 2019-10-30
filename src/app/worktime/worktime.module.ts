@@ -6,7 +6,8 @@ import { WorktimesComponent } from './worktimes/worktimes.component';
 import { WorktimesMobileComponent } from './worktimes-mobile/worktimes-mobile.component';
 import { WorktimesDesktopComponent } from './worktimes-desktop/worktimes-desktop.component';
 import { SharedModule } from 'src/shared/shared.module';
-import { MatListModule, MatTableModule } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 import { WorktimeListItemMobileComponent } from './worktime-list-item-mobile/worktime-list-item-mobile.component';
 
 @NgModule({
