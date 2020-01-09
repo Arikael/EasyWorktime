@@ -1,4 +1,3 @@
-import { Action } from '@ngrx/store';
 import { ScreenActions, ScreenActionTypes } from '../actions/screen.actions';
 
 
@@ -10,7 +9,7 @@ export const initialState: ScreenState = {
   isSmallScreen: true
 };
 
-export function ScreenSizeReducer(state = initialState, action: ScreenActions): ScreenState {
+export function ScreenSizeReducer(state: ScreenState = initialState, action: ScreenActions): ScreenState {
   switch (action.type) {
     case ScreenActionTypes.ChangeSize:
       return {
