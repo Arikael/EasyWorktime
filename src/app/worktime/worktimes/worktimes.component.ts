@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./worktimes.component.scss']
 })
 export class WorktimesComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }
